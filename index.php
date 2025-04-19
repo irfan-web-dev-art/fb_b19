@@ -15,6 +15,9 @@
 <body>
 
 
+    <?php include './add-popup.php' ?>
+
+
     <div class="container-fluid bg-body-tertiary min-vh-100">
         <div class="container">
             <div class="row">
@@ -29,8 +32,8 @@
 
 
                     <div class="row ">
-                        <div class="col-sm-6">
-                            <div class="card position-relative user-card w-50 shadow">
+                        <div class="col-sm-3">
+                            <div class="card position-relative user-card w-100 shadow">
                                 <div class="bg-secondary cross z-3 position-absolute d-flex align-items-center justify-content-center rounded-circle text-white"
                                     style="height: 15px;width:15px;left:5px;top:5px;cursor:pointer;">
                                     <i style="margin-top:-0.3rem" class="bi w-100 h-100 bi-x text-white"></i>
@@ -47,8 +50,22 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="col-sm-6">
+                        <div class="col-sm-3">
+                            <div class="card add-account shadow overflow-hidden"
+                                style="height: 100%;background:#F5F6F7;">
+                                <div style="height: 90%;" class="d-flex justify-content-center align-items-center ">
+                                    <div class="bg-primary d-flex justify-content-center align-items-center rounded-circle"
+                                        style="height: 40px;width:40px;">
+                                        <i class="bi bi-plus fw-bolder text-white fs-3"></i>
+                                    </div>
+                                </div>
+                                <div class="card-body bg-white p-0">
 
+                                    <p class="text-center  text-primary">
+                                        Add Account
+                                    </p>
+                                </div>
+                            </div>
                         </div>
                     </div>
 

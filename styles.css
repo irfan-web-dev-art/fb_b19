@@ -1,7 +1,5 @@
 body {
-  font-family: "Henny Penny", system-ui;
-  font-weight: 400;
-  font-style: normal;
+  font-family: sans-serif;
 }
 
 .cross {
@@ -19,4 +17,14 @@ body {
 
 .user-card:hover .cross i {
   color: black !important;
+}
+
+.login-overlay {
+  transform: translateY(-100%);
+  transition: all 0.6s;
+}
+
+.login-underlay {
+  transform: translateX(100%);
+  transition: all 0.6s;
 }
