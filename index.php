@@ -19,9 +19,10 @@
 
 
     <div class="container-fluid bg-body-tertiary min-vh-100">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-6">
+        <div style="height: 70vh;"
+            class="container d-flex justify-content-center align-items-center col-xl-9 col-lg-11 mx-auto">
+            <div class="row align-items-center">
+                <div class="col-lg-6 my-5">
                     <img src="https://logohistory.net/wp-content/uploads/2022/10/Facebook-Logo-2019.png" width="200px"
                         alt="">
                     <h2 class="display-6 fw-normal">Recent logins</h2>
@@ -32,7 +33,7 @@
 
 
                     <div class="row ">
-                        <div class="col-sm-3">
+                        <div class="col-sm-4">
                             <div class="card position-relative user-card w-100 shadow">
                                 <div class="bg-secondary cross z-3 position-absolute d-flex align-items-center justify-content-center rounded-circle text-white"
                                     style="height: 15px;width:15px;left:5px;top:5px;cursor:pointer;">
@@ -50,7 +51,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="col-sm-3">
+                        <div class="col-sm-4">
                             <div class="card add-account shadow overflow-hidden"
                                 style="height: 100%;background:#F5F6F7;">
                                 <div style="height: 90%;" class="d-flex justify-content-center align-items-center ">
@@ -71,7 +72,53 @@
 
 
                 </div>
-                <div class="col-lg-6"></div>
+                <div class="col-xl-5 col-lg-6 align-self-end">
+
+                    <!-- login form -->
+
+                    <form action="" style="" class="bg-white mx-auto shadow p-3 rounded-3   position-relative w-80">
+
+
+
+
+
+
+                        <div class="px-3">
+                            <input type="text" placeholder="Email address or phone number"
+                                class="form-control my-2 p-3-5">
+                            <div class="position-relative">
+
+                                <input type="password" placeholder="Password" class="form-control pass my-2 p-3-5">
+                                <i class="bi bi-eye-slash  eye position-absolute top-50"
+                                    style="transform: translateY(-50%);right:10px;cursor:pointer;"></i>
+                            </div>
+
+
+
+
+                            <button class="btn fw-semibold p-3-5 btn-primary w-100 my-3">
+                                Log In
+                            </button>
+
+                            <a href="#" class="text-primary text-center d-block mb-3">Forgotten password?</a>
+
+
+                            <hr class="my-3">
+                            <a href="/r.php" style="background-color: #36A420;white-space:no-wrap"
+                                class="btn p-3-5 fw-semibold w-60 mx-auto d-block text-white my-3">
+                                Create new account
+                            </a>
+
+                        </div>
+
+
+
+
+                    </form>
+
+
+
+                </div>
             </div>
         </div>
     </div>

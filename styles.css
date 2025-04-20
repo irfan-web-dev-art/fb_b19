@@ -28,3 +28,24 @@ body {
   transform: translateX(100%);
   transition: all 0.6s;
 }
+
+.w-70 {
+  min-width: 70% !important;
+  width: max-content !important;
+}
+.w-60 {
+  min-width: 60% !important;
+  width: max-content !important;
+}
+.w-80 {
+  min-width: 80% !important;
+  width: max-content !important;
+}
+
+.text-sm {
+  font-size: 0.8rem !important;
+}
+
+.p-3-5 {
+  padding: 10px 14px !important;
+}
