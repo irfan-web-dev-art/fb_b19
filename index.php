@@ -1,3 +1,6 @@
+<?php
+session_start();
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -15,10 +18,21 @@
 <body>
 
 
+    <?php
+    include './config.php';
+
+    if (isset($_SESSION['username'])) {
+        header("Location: $base_url/home.php");
+    }
+    ?>
+
+
+
+
     <?php include './add-popup.php' ?>
 
 
-    <div class="container-fluid bg-body-tertiary min-vh-100">
+    <div style="min-width: 500px;overflow-x:scroll;" class="container-fluid bg-body-tertiary min-vh-100">
         <div style="height: 70vh;"
             class="container d-flex justify-content-center align-items-center col-xl-9 col-lg-11 mx-auto">
             <div class="row align-items-center">
@@ -76,7 +90,8 @@
 
                     <!-- login form -->
 
-                    <form action="" style="" class="bg-white mx-auto shadow p-3 rounded-3   position-relative w-80">
+                    <form action="./login.php" method="POST" style=""
+                        class="bg-white mx-auto shadow p-3 rounded-3   position-relative w-80">
 
 
 
@@ -84,11 +99,12 @@
 
 
                         <div class="px-3">
-                            <input type="text" placeholder="Email address or phone number"
+                            <input type="text" name="m_mail" placeholder="Email address or phone number"
                                 class="form-control my-2 p-3-5">
                             <div class="position-relative">
 
-                                <input type="password" placeholder="Password" class="form-control pass my-2 p-3-5">
+                                <input name="password" type="password" placeholder="Password"
+                                    class="form-control pass my-2 p-3-5">
                                 <i class="bi bi-eye-slash  eye position-absolute top-50"
                                     style="transform: translateY(-50%);right:10px;cursor:pointer;"></i>
                             </div>
