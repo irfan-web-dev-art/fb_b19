@@ -8,6 +8,9 @@ let login_overlay = document.querySelector(".login-overlay");
 let close = document.querySelector(".close-login");
 let close_btn = document.querySelector(".invalid");
 let invalid_popup = document.querySelector(".notification-popup");
+
+let post_trigger = document.querySelector(".post-trigger");
+
 cross.addEventListener("click", () => {
   card.style.display = "none";
 });
@@ -39,3 +42,5 @@ close.addEventListener("click", () => {
 close_btn.addEventListener("click", () => {
   invalid_popup.style.transform = "translateX(150%)";
 });
+
+// post trigger btn

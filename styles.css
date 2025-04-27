@@ -1,3 +1,11 @@
+:root {
+  --bg-gray: #e2e5e9;
+}
+
+.bg-gray {
+  background-color: var(--bg-gray) !important;
+}
+
 body {
   font-family: sans-serif;
 }
@@ -118,6 +126,23 @@ body {
     transform: translateX(0);
     opacity: 1;
   }
+}
+.post-trigger {
+  background-color: #e4e6e9 !important;
+  cursor: pointer;
+}
+
+.post-trigger:hover {
+  background-color: rgb(215, 218, 223) !important;
+}
+
+.image-drop {
+  transition: all 0.2s;
+}
+
+.image-drop:hover {
+  background-color: var(--bg-gray) !important;
+  cursor: pointer;
 }
 
 @media (max-width: 576px) {

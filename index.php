@@ -13,6 +13,7 @@ session_start();
     <link href="https://fonts.googleapis.com/css2?family=Henny+Penny&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./styles.css">
     <title>Facebook - log in or sign up</title>
+
 </head>
 
 <body>
@@ -53,7 +54,6 @@ session_start();
 
 
     ?>
-
 
 
 
@@ -118,7 +118,7 @@ session_start();
 
                     <!-- login form -->
 
-                    <form action="./login.php" method="POST" 
+                    <form action="./login.php" method="POST"
                         class="bg-white mx-auto shadow p-3 rounded-3   position-relative w-80">
 
 
@@ -129,18 +129,18 @@ session_start();
                         <div class="px-3">
                             <input type="text" name="m_mail" placeholder="Email address or phone number"
                                 class="form-control my-2 p-3-5 <?php
-                                                                if (isset($_SESSION['invalid_credentials'])) {
-                                                                    echo 'is-invalid';
-                                                                }
-                                                                ?>">
+                                                                                                                                        if (isset($_SESSION['invalid_credentials'])) {
+                                                                                                                                            echo 'is-invalid';
+                                                                                                                                        }
+                                                                                                                                        ?>">
                             <div class="position-relative">
 
                                 <input name="password" type="password" placeholder="Password"
                                     class="form-control pass my-2 p-3-5 <?php
-                                                                        if (isset($_SESSION['invalid_credentials'])) {
-                                                                            echo "is-invalid";
-                                                                        }
-                                                                        ?>">
+                                                                                                                                    if (isset($_SESSION['invalid_credentials'])) {
+                                                                                                                                        echo "is-invalid";
+                                                                                                                                    }
+                                                                                                                                    ?>">
                                 <i class="bi bi-eye-slash  eye position-absolute top-50"
                                     style="transform: translateY(-50%);right:10px;cursor:pointer;"></i>
                             </div>
