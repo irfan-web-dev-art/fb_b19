@@ -118,7 +118,7 @@ session_start();
 
                     <!-- login form -->
 
-                    <form action="./login.php" method="POST" style=""
+                    <form action="./login.php" method="POST" 
                         class="bg-white mx-auto shadow p-3 rounded-3   position-relative w-80">
 
 
