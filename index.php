@@ -113,7 +113,6 @@
 
 
 
-
                     </form>
 
 
@@ -125,8 +124,6 @@
 
 
     <?php include './boot_js.php' ?>
-
-
     <script src="./app.js"></script>
 
 
