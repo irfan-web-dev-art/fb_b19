@@ -145,6 +145,16 @@ body {
   cursor: pointer;
 }
 
+.side-bar-items:hover {
+  cursor: pointer;
+  background-color: #dddfe2;
+  transition: all 0.5s;
+}
+
+.term_rule a:hover {
+  text-decoration: underline !important;
+}
+
 @media (max-width: 576px) {
   .fb-logo {
     margin: auto !important;
