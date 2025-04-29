@@ -36,9 +36,9 @@
     </div>
 
 
-    <div class="card col-12 col-lg-9 mx-auto p-4 shadow-lg rounded-3 my-3 add-story " style="cursor: pointer;">
+    <div class="card col-12 col-lg-9 mx-auto p-3 shadow-lg rounded-3 my-3 add-story " style="cursor: pointer;">
 
-        <div class="d-flex align-items-center gap-2  rounded-pill ">
+        <div class="d-flex align-items-center gap-2  rounded-2 add-story-icone">
             
                 <i class="bi bi-plus text-primary fs-2  rounded-circle " style="padding: 0px 6px;"></i>
             

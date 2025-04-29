@@ -169,14 +169,14 @@ body {
   right: -150px;
   transform: translateX(200%);
 }
-.add-story:hover{
-  background-color: #e4e6e9;
-}
+
 .add-story:hover i {
   background-color: var(--bg-gray);
   transition: all 0.5s;
 }
-
+.add-story:hover .add-story-icone {
+  background-color: #f1f1f3;
+}
 /* Media qurries */
 @media (max-width: 765px) {
   .nav-menu-dropdown {

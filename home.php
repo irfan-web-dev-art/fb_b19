@@ -59,7 +59,11 @@ session_start();
     </div>
 
     <?php
+    // ADD POST MODAL
     include './boot_js.php';
+    
+    // ADD STORY
+    include './add-story.php';
     ?>
 
 
