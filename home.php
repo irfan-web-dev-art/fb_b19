@@ -64,6 +64,10 @@ session_start();
 
 
     <script>
+        let searchIcone = document.querySelector(".search-icone");
+        let navLogo = document.querySelector(".nav-logo");
+        let searchbar = document.querySelector(".search-bar");
+        let logo_arrow = document.querySelector(".logo-arrow");
         let post_trigger = document.querySelector('.post-trigger');
         let post_trigger_2 = document.querySelector('.post-trigger-2');
         let image_selector_btn = document.querySelector('.image-selector-btn');
@@ -73,6 +77,8 @@ session_start();
         let close_post_modal = document.querySelector('.close-post-modal');
         let post_modal_bg = document.querySelector('.post-modal-bg');
         let post_modal = document.querySelector('.post-modal');
+        let nav_menu_btn = document.querySelector('.nav-menu-btn');
+        let nav_menu_dropdown = document.querySelector('.nav-menu-dropdown');
 
         // post trigger 
 
@@ -114,26 +120,36 @@ session_start();
             caption.rows = 7
         })
 
-        const searchIcone = document.querySelector(".search-icone");
-        const navLogo = document.querySelector(".nav-logo");
-        const searchbar = document.querySelector(".search-bar");
-        const logo_arrow = document.querySelector(".logo-arrow");
+        //nav bar links
 
         searchbar.addEventListener("click", (e) => {
-            e.stopPropagation(); // Prevent event from bubbling up
+            e.stopPropagation();
             navLogo.style.display = "none";
             searchIcone.style.display = "none";
             logo_arrow.classList.remove("d-none");
         });
 
         document.addEventListener("click", (e) => {
-            // Only run if we didn't click on the searchbar or its children
+
             if (!e.target.closest('.search-bar')) {
                 navLogo.style.display = "block";
                 searchIcone.style.display = "block";
                 logo_arrow.classList.add("d-none");
             }
         });
+
+
+        nav_menu_btn.addEventListener("click", (e) => {
+            e.stopPropagation();
+            nav_menu_dropdown.style.transform = "translateX(5%)";
+        })
+        document.addEventListener("click", (e) => {
+
+            if (!e.target.closest('.nav-menu-dropdown')) {
+                nav_menu_dropdown.style.transform = "translateX(200%)";
+
+            }
+        })
     </script>
 </body>
 

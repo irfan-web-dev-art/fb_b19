@@ -2,6 +2,7 @@
 
 
 <div class="col-12" style="padding-top: 10% !important;">
+    <!-- add post  -->
     <div class="card col-12 col-lg-9 mx-auto p-4 shadow-lg rounded-3 my-3">
         <div class="d-flex align-items-center gap-2">
             <img src="https://scontent.fisb17-1.fna.fbcdn.net/v/t1.30497-1/453178253_471506465671661_2781666950760530985_n.png?stp=dst-png_s120x120&_nc_cat=1&ccb=1-7&_nc_sid=136b72&_nc_ohc=5L0V52iBq3wQ7kNvwFxMGrs&_nc_oc=Adn2KAkdGrOw1X6hZsftI_G74h5I9PKj1wHeoMPtJ1MBClITRntOs0zXrqjaxKeDlFeR5m3kIFZqPbggLMfev7KF&_nc_zt=24&_nc_ht=scontent.fisb17-1.fna&oh=00_AfH72_R8U-VLFvbpl3ksBfhP9RieTYbfGT28GgCFc8jOtw&oe=6835B5FA"
@@ -32,5 +33,19 @@
             </div>
         </div>
 
+    </div>
+
+
+    <div class="card col-12 col-lg-9 mx-auto p-4 shadow-lg rounded-3 my-3 add-story " style="cursor: pointer;">
+
+        <div class="d-flex align-items-center gap-2  rounded-pill ">
+            
+                <i class="bi bi-plus text-primary fs-2  rounded-circle " style="padding: 0px 6px;"></i>
+            
+            <div>
+                <h6 class="fw-semibold m-0 p-0">Create Story</h6>
+                <p class="fw-normal m-0 p-0 text-secondary " style="font-size: 14px;">Share a photo or write something</p>
+            </div>
+        </div>
     </div>
 </div>

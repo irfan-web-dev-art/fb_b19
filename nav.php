@@ -57,15 +57,15 @@
 
 
             <!-- menu  -->
-            <div class="rounded-circle bg-gray menu position-relative " style="padding:0px 6px;  ">
-                <a href="" class="text-black"><i class="bi bi-list fs-3"></i></a>
+            <div class="rounded-circle bg-gray nav-menu-btn position-relative " style="padding:0px 6px;  ">
+            <i class="bi bi-list fs-3" style="cursor: pointer;"></i>
 
                 <!-- menu dropdown -->
-                <div class="menu-drop-down p-2 bg-info position-absolute  rounded  overflow-y-auto overflow-x-hidden" style="top: 50px; max-height:90vh !important; height:auto; right:-150px;width: 600px;">
+                <div class="nav-menu-dropdown p-2 border-1 shadow border-black bg-white position-absolute rounded overflow-y-auto overflow-x-hidden">
                     <h3 class="fw-bold">Menu</h3>
-                    <div class="row gap-0">
-                        <div class="col-8">
-                            <div class="card px-2 shadow ">
+                    <div class="row gap-0 ">
+                        <div class="col-md-8 col-12 ">
+                            <div class="px-2 shadow ">
 
                                 <!-- search bar -->
                                 <div class=" d-flex align-items-center gap-2 p-1 bg-gray rounded-pill w-100 ">
@@ -346,87 +346,76 @@
 
                             </div>
                         </div>
-                        <div class="col-4">
-                            <div class="card px-2 shadow mt-3">
-                                <h5 class="fw-semibold my-3 ">Social</h5>
-                                <h4 class="fw-bold my-3 ">Social</h4>
+                        <div class="d-none d-md-block col-md-4 ps-0">
+                            <div class="card px-2 shadow mt-3 pb-1">
+                                <h5 class="fw-semibold my-3 ">Create</h5>
 
                                 <ul class="list-unstyled ">
-                                    <!-- events -->
+                                    <!-- post -->
                                     <div class="d-flex align-items-center gap-3 py-2 px-1 rounded-2 menu-list-items ">
-                                        <div class="icone">
-                                            <i class="bi bi-calendar2-event-fill fs-3 text-primary"></i>
+                                        <div class="icone bg-gray rounded-circle " style="padding: 6px 8px;">
+                                            <i class="fa-solid fa-envelope fs-4 text-black"></i>
                                         </div>
-
-                                        <div>
-                                            <h5 class="m-0 fw-semibold" style="font-size: 15px;">Events</h5>
-                                            <p class="m-0" style="font-size: 13px;">Organise or find events and other things to do online and nearby.</p>
-                                        </div>
+                                        <h5 class="m-0 fw-semibold" style="font-size: 15px;">Post</h5>
                                     </div>
 
-                                    <!-- Friends -->
-                                    <div class="d-flex align-items-center gap-3 py-2 px-1 rounded-2 menu-list-items">
-                                        <div class="icone">
-                                            <i class="fa-solid fa-user-group fs-4"></i>
+                                    <!-- Story -->
+                                    <div class="d-flex align-items-center gap-3 py-2 px-1 rounded-2 menu-list-items ">
+                                        <div class="icone bg-gray rounded-circle " style="padding: 6px 8px;">
+                                            <i class="fa-solid fa-book-open-reader fs-4 text-black"></i>
                                         </div>
-
-                                        <div>
-                                            <h5 class="m-0 fw-semibold" style="font-size: 15px;">Friends</h5>
-                                            <p class="m-0" style="font-size: 13px;">Search for friends or people you may know.</p>
-                                        </div>
+                                        <h5 class="m-0 fw-semibold" style="font-size: 15px;">Story</h5>
                                     </div>
 
-                                    <!-- Groups -->
-                                    <div class="d-flex align-items-center gap-3 py-2 px-1 rounded-2 menu-list-items">
-                                        <div class="icone">
-                                            <i class="fa-solid fa-users-line fs-4 text-primary"></i>
+                                    <!-- Reel -->
+                                    <div class="d-flex align-items-center gap-3 py-2 px-1 rounded-2 menu-list-items ">
+                                        <div class="icone bg-gray rounded-circle " style="padding: 6px 8px;">
+                                            <i class="fa-solid fa-film fs-4 text-black"></i>
                                         </div>
-
-                                        <div>
-                                            <h5 class="m-0 fw-semibold" style="font-size: 15px;">Groups</h5>
-                                            <p class="m-0" style="font-size: 13px;">Connect with people who share your interests.</p>
-                                        </div>
+                                        <h5 class="m-0 fw-semibold" style="font-size: 15px;">Reel</h5>
                                     </div>
-                                    <!-- News Feed-->
-                                    <div class="d-flex align-items-center gap-3 py-2 px-1 rounded-2 menu-list-items">
-                                        <div class="icone">
-                                            <i class="bi bi-newspaper fs-4 text-primary ms-1"></i>
-                                        </div>
 
-                                        <div>
-                                            <h5 class="m-0 fw-semibold" style="font-size: 15px;">News Feed</h5>
-                                            <p class="m-0" style="font-size: 13px;">See relevant posts from people and Pages that you follow.</p>
+                                    <!-- Life Event -->
+                                    <div class="d-flex align-items-center gap-3 py-2 px-1 rounded-2 menu-list-items ">
+                                        <div class="icone bg-gray rounded-circle " style="padding: 6px 8px;">
+                                            <i class="fa-solid fa-calendar-week fs-4 text-black"></i>
                                         </div>
+                                        <h5 class="m-0 fw-semibold" style="font-size: 15px;">Life Event</h5>
+                                    </div>
+
+                                    <hr>
+
+                                    <!-- Page -->
+                                    <div class="d-flex align-items-center gap-3 py-2 px-1 rounded-2 menu-list-items ">
+                                        <div class="icone bg-gray rounded-circle " style="padding: 6px 8px;">
+                                            <i class="fa-solid fa-flag-checkered fs-4 text-black"></i>
+                                        </div>
+                                        <h5 class="m-0 fw-semibold" style="font-size: 15px;">Page</h5>
                                     </div>
 
 
-                                    <!-- Feed-->
-                                    <div class="d-flex align-items-center gap-3 py-2 px-1 rounded-2 menu-list-items">
-                                        <div class="icone">
-                                            <i class="fa-solid fa-radio fs-4 text-primary ms-1"></i>
+                                    <!-- Ad -->
+                                    <div class="d-flex align-items-center gap-3 py-2 px-1 rounded-2 menu-list-items ">
+                                        <div class="icone bg-gray rounded-circle " style="padding: 6px 8px;">
+                                            <i class="fa-solid fa-bullhorn fs-4 text-black"></i>
                                         </div>
-
-                                        <div>
-                                            <h5 class="m-0 fw-semibold" style="font-size: 15px;">Feeds</h5>
-                                            <p class="m-0" style="font-size: 13px;">See the most recent posts from your friends, groups, Pages and more.</p>
-                                        </div>
+                                        <h5 class="m-0 fw-semibold" style="font-size: 15px;">Ad</h5>
                                     </div>
 
-                                    <!-- page-->
-                                    <div class="d-flex align-items-center gap-3 py-2 px-1 rounded-2 menu-list-items">
-                                        <div class="icone">
-                                            <i class="bi bi-flag-fill fs-4 text-primary ms-1"></i>
+                                    <!-- Group -->
+                                    <div class="d-flex align-items-center gap-3 py-2 px-1 rounded-2 menu-list-items ">
+                                        <div class="icone bg-gray rounded-circle " style="padding: 6px 8px;">
+                                            <i class="fa-solid fa-people-group fs-4 text-black"></i>
                                         </div>
-
-                                        <div>
-                                            <h5 class="m-0 fw-semibold" style="font-size: 15px;">Pages</h5>
-                                            <p class="m-0" style="font-size: 13px;">Discover and connect with businesses on Facebook.</p>
-                                        </div>
+                                        <h5 class="m-0 fw-semibold" style="font-size: 15px;">Group</h5>
                                     </div>
-
-
-
-
+                                    <!-- Marketplace Listing -->
+                                    <div class="d-flex align-items-center gap-3 py-2 px-1 rounded-2 menu-list-items ">
+                                        <div class="icone bg-gray rounded-circle " style="padding: 6px 8px;">
+                                            <i class="fa-solid fa-bag-shopping fs-4 text-black"></i>
+                                        </div>
+                                        <h5 class="m-0 fw-semibold" style="font-size: 15px;">Marketplace Listing</h5>
+                                    </div>
                                 </ul>
                             </div>
 

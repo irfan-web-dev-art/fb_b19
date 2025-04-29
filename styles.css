@@ -155,15 +155,39 @@ body {
   text-decoration: underline !important;
 }
 
-
-
-.menu-drop-down .menu-list-items:hover{
+.nav-menu-dropdown .menu-list-items:hover {
   cursor: pointer;
   transition: all 0.5s;
   background-color: var(--bg-gray);
 }
+.nav-menu-dropdown {
+  width: 600px;
+  top: 50px;
+  max-height: 90vh;
+  height: auto;
+  transition: all 1s;
+  right: -150px;
+  transform: translateX(200%);
+}
+.add-story:hover{
+  background-color: #e4e6e9;
+}
+.add-story:hover i {
+  background-color: var(--bg-gray);
+  transition: all 0.5s;
+}
+
+/* Media qurries */
+@media (max-width: 765px) {
+  .nav-menu-dropdown {
+    width: 400px !important;
+  }
+}
 
 @media (max-width: 576px) {
+  .nav-menu-dropdown {
+    width: 350px !important;
+  }
   .fb-logo {
     margin: auto !important;
     display: block !important;
