@@ -28,7 +28,7 @@
 
             <div class="p-3 image-selector position-relative d-none">
                 <div style="height:40px;width:40px;right:20px;top:20px;cursor:pointer"
-                    class="d-flex close-caption position-absolute rounded-circle bg-white border justify-content-center align-items-center">
+                    class="d-flex close-btn position-absolute rounded-circle bg-white border justify-content-center align-items-center">
                     <i class="bi bi-x-lg"></i>
                 </div>
                 <input name="image" id="image" type="file" style="display: none;">
