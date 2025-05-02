@@ -39,15 +39,15 @@ session_start();
 
 
         <div class="row">
-            <div class="col-lg-3 d-none d-lg-block">
+            <div class="col-lg-3 h-100 d-none d-lg-block">
                 <!-- sidebar -->
                 <?php include './sidebar.php' ?>
             </div>
-            <div class="col-lg-6 col-sm-8 ">
+            <div class="col-lg-6 col-12 mx-auto col-md-8 ">
                 <!-- main content -->
                 <?php include './main-content.php' ?>
             </div>
-            <div class="col-lg-3 d-none d-sm-block col-sm-4 ">
+            <div class="col-lg-3 d-none d-md-block col-md-4 ">
                 <!-- ads -->
                 <?php include './ads.php' ?>
             </div>
@@ -59,52 +59,101 @@ session_start();
     </div>
 
     <?php
+    // ADD POST MODAL
     include './boot_js.php';
+    
+    // ADD STORY
+    include './add-story.php';
     ?>
 
 
     <script>
-    let post_trigger = document.querySelector('.post-trigger')
-    let image_selector_btn = document.querySelector('.image-selector-btn')
-    let caption = document.querySelector('.caption-text')
-    let close_caption = document.querySelector('.close-caption')
-    let image_selector = document.querySelector('.image-selector')
-    post_trigger.addEventListener('click', () => {
+        let searchIcone = document.querySelector(".search-icone");
+        let navLogo = document.querySelector(".nav-logo");
+        let searchbar = document.querySelector(".search-bar");
+        let logo_arrow = document.querySelector(".logo-arrow");
+        let post_trigger = document.querySelector('.post-trigger');
+        let post_trigger_2 = document.querySelector('.post-trigger-2');
+        let image_selector_btn = document.querySelector('.image-selector-btn');
+        let caption = document.querySelector('.caption-text');
+        let close_caption = document.querySelector('.close-caption');
+        let image_selector = document.querySelector('.image-selector');
+        let close_post_modal = document.querySelector('.close-post-modal');
+        let post_modal_bg = document.querySelector('.post-modal-bg');
+        let post_modal = document.querySelector('.post-modal');
+        let nav_menu_btn = document.querySelector('.nav-menu-btn');
+        let nav_menu_dropdown = document.querySelector('.nav-menu-dropdown');
 
-    })
+        // post trigger 
+
+        post_trigger.addEventListener('click', () => {
+
+            post_modal_bg.style.transform = "translateX(0%)";
+            setTimeout(() => {
+                post_modal.style.transform = "translateY(0%)";
+            }, 650);
+
+        });
 
 
+        close_post_modal.addEventListener("click", () => {
 
-    image_selector_btn.addEventListener('click', () => {
-        image_selector.classList.remove('d-none')
-        caption.rows = 2
-    })
-    close_caption.addEventListener('click', () => {
-        image_selector.classList.add('d-none')
-        caption.rows = 7
-    })
-    </script>
+            post_modal.style.transform = "translateX(300%)";
+            setTimeout(() => {
+                post_modal_bg.style.transform = "translateY(-100%)";
+            }, 650);
+
+        })
+
+        post_trigger_2.addEventListener('click', () => {
+
+            post_modal_bg.style.transform = "translateX(0%)";
+            setTimeout(() => {
+                post_modal.style.transform = "translateY(0%)";
+            }, 650);
+
+        });
 
 
+        image_selector_btn.addEventListener('click', () => {
+            image_selector.classList.remove('d-none')
+            caption.rows = 2
+        })
+        close_caption.addEventListener('click', () => {
+            image_selector.classList.add('d-none')
+            caption.rows = 7
+        })
+
+        //nav bar links
+
+        searchbar.addEventListener("click", (e) => {
+            e.stopPropagation();
+            navLogo.style.display = "none";
+            searchIcone.style.display = "none";
+            logo_arrow.classList.remove("d-none");
+        });
+
+        document.addEventListener("click", (e) => {
+
+            if (!e.target.closest('.search-bar')) {
+                navLogo.style.display = "block";
+                searchIcone.style.display = "block";
+                logo_arrow.classList.add("d-none");
+            }
+        });
 
 
+        nav_menu_btn.addEventListener("click", (e) => {
+            e.stopPropagation();
+            nav_menu_dropdown.style.transform = "translateX(5%)";
+        })
+        document.addEventListener("click", (e) => {
 
-    <script>
-    // const searchIcone = document.querySelector(".search-icone")
-    // const navLogo = document.querySelector(".nav-logo")
-    // const searchbar = document.querySelector(".search-bar")
-    // const logo_arrow = document.querySelector(".logo-arrow")
+            if (!e.target.closest('.nav-menu-dropdown')) {
+                nav_menu_dropdown.style.transform = "translateX(200%)";
 
-    // searchbar.addEventListener("click", (e) => {
-    //     navLogo.style.display = "none";
-    //     searchIcone.style.display = "none";
-    //     logo_arrow.classList.remove("d-none")
-    // })
-    // document.addEventListener("click", () => {
-    //     navLogo.style.display = "block";
-    //     searchIcone.style.display = "block";
-    //     logo_arrow.classList.add("d-none");
-    // });
+            }
+        })
     </script>
 </body>
 
