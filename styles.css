@@ -177,6 +177,13 @@ body {
 .add-story:hover .add-story-icone {
   background-color: #f1f1f3;
 }
+
+.ads-sidebar .ads:hover {
+  background-color: var(--bg-gray);
+  transition: all 0.5s;
+  cursor: pointer;
+}
+
 /* Media qurries */
 @media (max-width: 765px) {
   .nav-menu-dropdown {
