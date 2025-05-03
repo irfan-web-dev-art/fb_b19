@@ -1,18 +1,16 @@
 <style>
-
-     .post-modal-bg {
-        transform: translateY(-100%) ;
-        transition: all 1s ;
-    }
-
+.post-modal-bg {
+    transform: translateY(-100%);
+    transition: all 0.4s;
+}
 
 
-     .post-modal {
-        transform: translateX(250%) ;
-        transition: all 1.5s ;
 
-    }
+.post-modal {
+    transform: translateX(250%);
+    transition: all 0.6s;
 
+}
 </style>
 <!--   modal background -->
 
@@ -50,14 +48,16 @@
 
             <!-- image section -->
             <div class="p-3 image-selector position-relative d-none">
-                <div style="height:40px;width:40px;right:20px;top:20px;cursor:pointer"
-                    class="d-flex close-caption position-absolute rounded-circle bg-white border justify-content-center align-items-center">
+                <div style="height:40px;width:40px;right:20px;top:20px;cursor:pointer;z-index:5555"
+                    class="d-flex close-caption-btn position-absolute rounded-circle bg-white border justify-content-center align-items-center">
                     <i class="bi bi-x-lg"></i>
                 </div>
-                <input name="image" id="image" type="file" style="display: none;">
-
+                <input name="image" id="image" type="file" class="post-image-input" style="display: none;">
+                <img style="height:300px;object-fit:contain;left:0" class='position-absolute d-none preview-image'
+                    width="100%" src="" alt="">
                 <label for="image" class="w-100">
-                    <div class="w-100 image-drop border-2 mx-auto border d-flex justify-content-center align-items-center p-3" style="height: 300px;">
+                    <div class="w-100 image-drop border-2 mx-auto border d-flex justify-content-center align-items-center p-3"
+                        style="height: 300px;">
                         <div class="d-flex flex-column justify-content-center align-items-center">
                             <div style="height:50px;width:50px"
                                 class="d-flex rounded-circle bg-gray justify-content-center align-items-center">
@@ -93,8 +93,16 @@
                 </div>
             </div>
 
+            <div class="pb-3 px-3">
+
+                <button disabled class="btn w-100 post-btn  btn-secondary">
+                    Post
+                </button>
+            </div>
         </form>
 
     </div>
+
+
 
 </div>
