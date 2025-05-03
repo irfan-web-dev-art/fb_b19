@@ -6,6 +6,10 @@
   background-color: var(--bg-gray) !important;
 }
 
+::-webkit-scrollbar {
+  width: 0px;
+}
+
 body {
   font-family: sans-serif;
 }
@@ -170,9 +174,8 @@ body {
   transform: translateX(200%);
 }
 
-
 /* Add story */
-.add-story-bg{
+.add-story-bg {
   transform: translateY(-100%);
   transition: 1s;
 }

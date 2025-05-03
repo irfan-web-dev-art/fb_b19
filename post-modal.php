@@ -42,7 +42,7 @@
             </div>
         </div>
 
-        <form action="" method="POST">
+        <form action="./make-post.php" method="POST" enctype="multipart/form-data">
             <textarea rows="7" style="outline-width:0;resize:none" class="w-100 caption-text border-0 px-3" type="text"
                 name="caption" placeholder="What's on your mind? <?php echo $_SESSION['username'] ?>"></textarea>
 
