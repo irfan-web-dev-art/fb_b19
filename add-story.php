@@ -1,17 +1,12 @@
-<?php
-session_start();
-?>
 
 <!-- add story PopUP -->
 
 
 <div style="background-color: rgb(255, 255, 255); top: 0;"
-    class="min-vh-100 w-100 position-fixed T  z-3  add-story-bg d-none">
+    class="min-vh-100 w-100 position-fixed  z-2  add-story-bg ">
 
     <!-- NavBar -->
-    <nav class="px-2 justify-content-between row  position-fixed top-0 z-3 w-100 " style="min-height: 60px !important;">
-        <!-- search bar -->
-        <div class="col-6 d-flex align-items-center gap-2">
+
 
 
             <i class="bi bi-x fs-4 text-white rounded-circle close-add-story "
@@ -499,14 +494,25 @@ session_start();
                     </h5>
 
                 </div>
+
+                <hr>
             </div>
 
 
         </div>
+
+
+
         <div class="col-12 col-lg-10 ">
-
-
             <div class=" d-flex align-items-center justify-content-center gap-3 h-100">
+
+                <!-- upload story -->
+                <div class=" rounded-3 d-flex align-items-center justify-content-center" style="width: 250px; min-height:350px; background: linear-gradient(135deg, #6B4EFF, #80E1FF); cursor: pointer; ">
+                    <label for="image" class="w-100">
+                        <input name="image" id="image" type="file" style="display: none;">
+
+                        <div class="w-100  border-0 mx-auto d-flex justify-content-center align-items-center p-3 h-100">
+
                 <div class=" rounded-2 d-flex align-items-center justify-content-center"
                     style="width: 200px; height:300px">
                     <label for="image" class="w-100">
@@ -514,12 +520,17 @@ session_start();
 
                         <div class="w-100 image-drop border-2 mx-auto border d-flex justify-content-center align-items-center p-3"
                             style="height: 300px;">
+
                             <div class="d-flex flex-column justify-content-center align-items-center gap-2">
                                 <div style="height:50px;width:50px"
                                     class="d-flex rounded-circle bg-gray justify-content-center align-items-center">
                                     <i class="fa-solid fa-images"></i>
                                 </div>
+
+                                <h5 class="m-0 fs-6 text-white">Create a photo story</h5>
+
                                 <h5 class="m-0 fs-6">Create a photo story</h5>
+
 
                             </div>
                         </div>
@@ -529,7 +540,26 @@ session_start();
                     </label>
                 </div>
 
-                <h4>654</h4>
+                <!-- create text story -->
+                <div class=" rounded-3 d-flex align-items-center justify-content-center" style="width: 250px; min-height:350px; background: linear-gradient(135deg, #A248FF, #FF6176);cursor: pointer; ">
+                    <label for="image" class="w-100">
+                        <input name="image" id="image" type="file" style="display: none;">
+
+                        <div class="w-100  border-0 mx-auto d-flex justify-content-center align-items-center p-3 h-100">
+                            <div class="d-flex flex-column justify-content-center align-items-center gap-2">
+                                <div style="height:50px;width:50px"
+                                    class="d-flex rounded-circle bg-gray justify-content-center align-items-center">
+                                    <i class="fa-solid fa-images"></i>
+                                </div>
+                                <h5 class="m-0 fs-6 text-white">Create a text story</h5>
+
+                            </div>
+                        </div>
+
+
+
+                    </label>
+                </div>
             </div>
 
         </div>
