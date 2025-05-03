@@ -68,92 +68,128 @@ session_start();
 
 
     <script>
-        let searchIcone = document.querySelector(".search-icone");
-        let navLogo = document.querySelector(".nav-logo");
-        let searchbar = document.querySelector(".search-bar");
-        let logo_arrow = document.querySelector(".logo-arrow");
-        let post_trigger = document.querySelector('.post-trigger');
-        let post_trigger_2 = document.querySelector('.post-trigger-2');
-        let image_selector_btn = document.querySelector('.image-selector-btn');
-        let caption = document.querySelector('.caption-text');
-        let close_caption = document.querySelector('.close-caption');
-        let image_selector = document.querySelector('.image-selector');
-        let close_post_modal = document.querySelector('.close-post-modal');
-        let post_modal_bg = document.querySelector('.post-modal-bg');
-        let post_modal = document.querySelector('.post-modal');
-        let nav_menu_btn = document.querySelector('.nav-menu-btn');
-        let nav_menu_dropdown = document.querySelector('.nav-menu-dropdown');
-
-        // post trigger 
-
-        post_trigger.addEventListener('click', () => {
-
-            post_modal_bg.style.transform = "translateX(0%)";
-            setTimeout(() => {
-                post_modal.style.transform = "translateY(0%)";
-            }, 650);
-
-        });
+    let searchIcone = document.querySelector(".search-icone");
+    let navLogo = document.querySelector(".nav-logo");
+    let searchbar = document.querySelector(".search-bar");
+    let logo_arrow = document.querySelector(".logo-arrow");
+    let post_trigger = document.querySelector('.post-trigger');
+    let post_trigger_2 = document.querySelector('.post-trigger-2');
+    let image_selector_btn = document.querySelector('.image-selector-btn');
+    let caption = document.querySelector('.caption-text');
+    let close_caption = document.querySelector('.close-caption-btn');
+    let image_selector = document.querySelector('.image-selector');
+    let close_post_modal = document.querySelector('.close-post-modal');
+    let post_modal_bg = document.querySelector('.post-modal-bg');
+    let post_modal = document.querySelector('.post-modal');
+    let nav_menu_btn = document.querySelector('.nav-menu-btn');
+    let nav_menu_dropdown = document.querySelector('.nav-menu-dropdown');
+    let post_btn = document.querySelector('.post-btn')
+    let post_input = document.querySelector('.post-image-input')
+    let preview_image = document.querySelector('.preview-image')
 
 
-        close_post_modal.addEventListener("click", () => {
+    // post trigger 
 
-            post_modal.style.transform = "translateX(300%)";
-            setTimeout(() => {
-                post_modal_bg.style.transform = "translateY(-100%)";
-            }, 650);
+    post_trigger.addEventListener('click', () => {
 
-        })
+        post_modal_bg.style.transform = "translateX(0%)";
+        setTimeout(() => {
+            post_modal.style.transform = "translateY(0%)";
+        }, 650);
 
-        post_trigger_2.addEventListener('click', () => {
-
-            post_modal_bg.style.transform = "translateX(0%)";
-            setTimeout(() => {
-                post_modal.style.transform = "translateY(0%)";
-            }, 650);
-
-        });
+    });
 
 
-        image_selector_btn.addEventListener('click', () => {
-            image_selector.classList.remove('d-none')
-            caption.rows = 2
-        })
-        close_caption.addEventListener('click', () => {
-            image_selector.classList.add('d-none')
-            caption.rows = 7
-        })
+    close_post_modal.addEventListener("click", () => {
 
-        //nav bar links
+        post_modal.style.transform = "translateX(300%)";
+        setTimeout(() => {
+            post_modal_bg.style.transform = "translateY(-100%)";
+        }, 650);
 
-        searchbar.addEventListener("click", (e) => {
-            e.stopPropagation();
-            navLogo.style.display = "none";
-            searchIcone.style.display = "none";
-            logo_arrow.classList.remove("d-none");
-        });
+    })
 
-        document.addEventListener("click", (e) => {
+    post_trigger_2.addEventListener('click', () => {
 
-            if (!e.target.closest('.search-bar')) {
-                navLogo.style.display = "block";
-                searchIcone.style.display = "block";
-                logo_arrow.classList.add("d-none");
-            }
-        });
+        post_modal_bg.style.transform = "translateX(0%)";
+        setTimeout(() => {
+            post_modal.style.transform = "translateY(0%)";
+        }, 650);
+
+    });
 
 
-        nav_menu_btn.addEventListener("click", (e) => {
-            e.stopPropagation();
-            nav_menu_dropdown.style.transform = "translateX(5%)";
-        })
-        document.addEventListener("click", (e) => {
+    image_selector_btn.addEventListener('click', () => {
+        image_selector.classList.remove('d-none')
+        caption.rows = 2
+    })
 
-            if (!e.target.closest('.nav-menu-dropdown')) {
-                nav_menu_dropdown.style.transform = "translateX(200%)";
 
-            }
-        })
+
+    close_caption.addEventListener('click', () => {
+        image_selector.classList.add('d-none')
+        caption.rows = 7
+        preview_image.classList.add('d-none')
+        post_btn.classList.add('btn-secondary')
+        post_btn.classList.remove('btn-primary')
+        post_btn.disabled = true
+    })
+
+
+    //nav bar links
+
+    searchbar.addEventListener("click", (e) => {
+        e.stopPropagation();
+        navLogo.style.display = "none";
+        searchIcone.style.display = "none";
+        logo_arrow.classList.remove("d-none");
+    });
+
+    document.addEventListener("click", (e) => {
+
+        if (!e.target.closest('.search-bar')) {
+            navLogo.style.display = "block";
+            searchIcone.style.display = "block";
+            logo_arrow.classList.add("d-none");
+        }
+    });
+
+
+    nav_menu_btn.addEventListener("click", (e) => {
+        e.stopPropagation();
+        nav_menu_dropdown.style.transform = "translateX(5%)";
+    })
+    document.addEventListener("click", (e) => {
+
+        if (!e.target.closest('.nav-menu-dropdown')) {
+            nav_menu_dropdown.style.transform = "translateX(200%)";
+
+        }
+    })
+
+
+    caption.addEventListener('input', () => {
+        if (caption.value != '') {
+            post_btn.classList.remove('btn-secondary')
+            post_btn.classList.add('btn-primary')
+            post_btn.disabled = false
+        } else {
+            post_btn.classList.add('btn-secondary')
+            post_btn.classList.remove('btn-primary')
+            post_btn.disabled = true
+        }
+    })
+
+
+    post_input.addEventListener('input', (e) => {
+        preview_image.classList.remove('d-none')
+        let file = e.target.files[0]
+        let image_url = URL.createObjectURL(file)
+        post_btn.disabled = false
+        post_btn.classList.add('btn-primary')
+        post_btn.classList.remove('btn-secondary')
+        preview_image.src = image_url
+    })
     </script>
 </body>
 
