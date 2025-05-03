@@ -1,12 +1,14 @@
-<nav class="px-2 justify-content-between row shadow position-fixed top-0 z-3 w-100 bg-white" style="min-height: 60px !important;">
+<nav class="px-2 justify-content-between row shadow position-fixed top-0 z-3 w-100 bg-white nav-bar" style="min-height: 60px !important;">
     <!-- search bar -->
-    <div class="col-3 d-flex align-items-center gap-2">
+    <div class="col-3 d-flex align-items-center gap-2  ">
+        <i class="bi bi-x fs-4 text-white rounded-circle close-add-story d-none " style="padding: 3px 8px;background-color: #909090 ;cursor: pointer;"></i>
+
         <div class="logo">
             <img src="./imges/logo.png" alt="" width=" 40px" class="nav-logo">
             <i class="bi bi-arrow-left logo-arrow d-none"></i>
         </div>
 
-        <div class="form-group d-flex align-items-center gap-2 border-2  rounded-pill w-75 ">
+        <div class="form-group d-flex align-items-center gap-2 border-2  rounded-pill w-75 nav-search-bar ">
             <i class="bi bi-search text-secondary search-icone"></i>
             <input type="search" name="search" class="border-0 search-bar py-2   w-100" placeholder="Search Facebook"
                 style="cursor: pointer; border:0 !important; outline: none;">
@@ -14,7 +16,7 @@
         </div>
     </div>
     <!-- home Icones -->
-    <div class="col-lg-6 d-none d-lg-block">
+    <div class="col-lg-6 d-none d-lg-block home-icone">
         <ul class="d-flex align-items-center justify-content-center list-unstyled h-100">
             <!-- home  -->
             <div class="px-5  h-100 d-flex align-items-center" style="border-bottom:solid 4px #0866FF">
@@ -52,13 +54,13 @@
 
 
     <!-- ___Menu Icones___ -->
-    <div class="col-3 ">
+    <div class="col-3 menu-icons z-3">
         <ul class="list-unstyled d-flex align-items-center justify-content-end gap-2 h-100">
 
 
             <!-- menu  -->
             <div class="rounded-circle bg-gray nav-menu-btn position-relative " style="padding:0px 6px;  ">
-            <i class="bi bi-list fs-3" style="cursor: pointer;"></i>
+                <i class="bi bi-list fs-3" style="cursor: pointer;"></i>
 
                 <!-- menu dropdown -->
                 <div class="nav-menu-dropdown p-2 border-1 shadow border-black bg-white position-absolute rounded overflow-y-auto overflow-x-hidden">

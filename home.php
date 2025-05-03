@@ -61,16 +61,19 @@ session_start();
     <?php
     // ADD POST MODAL
     include './boot_js.php';
-    
+
     // ADD STORY
     include './add-story.php';
     ?>
 
 
     <script>
+        let nav_bar = document.querySelector(".nav-bar");
+        let home_icone = document.querySelector(".home-icone")
         let searchIcone = document.querySelector(".search-icone");
         let navLogo = document.querySelector(".nav-logo");
         let searchbar = document.querySelector(".search-bar");
+        let nav_search_bar = document.querySelector(".nav-search-bar");
         let logo_arrow = document.querySelector(".logo-arrow");
         let post_trigger = document.querySelector('.post-trigger');
         let post_trigger_2 = document.querySelector('.post-trigger-2');
@@ -83,6 +86,9 @@ session_start();
         let post_modal = document.querySelector('.post-modal');
         let nav_menu_btn = document.querySelector('.nav-menu-btn');
         let nav_menu_dropdown = document.querySelector('.nav-menu-dropdown');
+        let add_story = document.querySelector('.add-story');
+        let add_story_popup = document.querySelector('.add-story-bg');
+        let close_add_story_popup = document.querySelector('.close-add-story');
 
         // post trigger 
 
@@ -153,6 +159,31 @@ session_start();
                 nav_menu_dropdown.style.transform = "translateX(200%)";
 
             }
+        })
+
+
+
+
+        // add story popup
+
+
+        add_story.addEventListener("click", () => {
+            add_story_popup.style.transform = 'translateY(0%)';
+            nav_bar.classList.remove("shadow");
+            home_icone.classList.remove("d-lg-block");
+            nav_search_bar.classList.add("d-none")
+            close_add_story_popup.classList.remove("d-none")
+        })
+        
+        close_add_story_popup.addEventListener("click", () => {
+            
+            add_story_popup.style.transform = 'translateY(-100%)';
+            nav_bar.classList.add("shadow");
+            home_icone.classList.add("d-lg-block");
+            nav_search_bar.classList.remove("d-none")
+            close_add_story_popup.classList.add("d-none")
+            
+
         })
     </script>
 </body>
