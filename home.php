@@ -82,6 +82,9 @@ session_start();
 
     <!--  -->
 
+    <?php 
+        include './boot_js.php'
+     ?>
 
 
     <script>

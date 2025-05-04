@@ -1,6 +1,92 @@
+<style>
+.post-container {
+
+    margin: 20px auto;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    background-color: #fff;
+}
+
+.post-header {
+    padding: 10px 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #ddd;
+}
+
+.post-image {
+    width: 100%;
+    height: 300px;
+    background-color: #333;
+}
+
+.reaction-stats {
+    padding: 10px 15px;
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid #ddd;
+}
+
+.action-buttons {
+    display: flex;
+    justify-content: space-around;
+    padding: 10px 15px;
+    border-bottom: 1px solid #ddd;
+}
+
+.comment-section {
+    padding: 15px;
+}
+
+.comment {
+    display: flex;
+    margin-bottom: 15px;
+}
+
+.comment img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+.comment-body {
+    background-color: #f1f1f1;
+    padding: 10px;
+    border-radius: 15px;
+    flex-grow: 1;
+}
+
+.comment-actions {
+    margin-top: 5px;
+    font-size: 0.9em;
+    color: #666;
+}
+
+.comment-input {
+    display: flex;
+    align-items: center;
+    margin-top: 15px;
+}
+
+.comment-input img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+.comment-input input {
+    flex-grow: 1;
+    padding: 8px;
+    border-radius: 20px;
+    border: 1px solid #ddd;
+}
+</style>
 <?php 
     include './config.php';
-    $select = "SELECT * FROM posts ORDER BY(id) DESC";
+    $select = "SELECT posts.id AS post_id,posts.image,posts.caption,users.id AS user_id,users.f_name,users.l_name FROM posts JOIN users ON users.id = posts.user_id ORDER BY(posts.id) DESC";
     $result = mysqli_query($connection,$select);
     foreach($result as $item){
 ?>
@@ -18,7 +104,7 @@
                 </div>
                 <div>
                     <h6 class="m-0 text-capitalize fw-bold ">
-                        <?php echo $_SESSION["username"] ?>
+                        <?php echo $item['f_name'] . ' ' . $item['l_name'] ?>
                     </h6>
                     <span class="text-secondary text-capitalize fw-bold"> 22h</span>
                 </div>
@@ -89,7 +175,82 @@
             <!-- comments -->
             <div class="col-3 d-flex justify-content-center gap-2 align-items-center">
                 <i class="bi bi-chat-dots fs-5"></i>
-                <span class="text-secondary">comments</span>
+                <!-- Button trigger modal -->
+                <span type="button" class="" data-bs-toggle="modal" data-bs-target="#p-<?php echo $item['post_id'] ?>">
+                    Comment
+                </span>
+
+                <!-- Modal -->
+                <div class="modal fade " id="p-<?php echo $item['post_id'] ?>" tabindex="-1"
+                    aria-labelledby="exampleModalLabel" aria-hidden="true">
+                    <div class="modal-dialog ">
+                        <div class="modal-content col-xl-6">
+
+
+
+
+                            <div class=" post-container w-100">
+                                <div class="post-header">
+                                    <h5 class="mb-0">Shyok Times's post</h5>
+                                    <button type="button" class="btn-close" aria-label="Close"></button>
+                                </div>
+                                <div class="">
+                                    <img style="object-fit: contain;" width="100%" height="400px"
+                                        src="./post_images/<?php echo $item['image'] ?>" alt="">
+                                </div>
+                                <div class="reaction-stats">
+                                    <span>🙂 2.5K</span>
+
+                                    <span>434 comments • 29 shares</span>
+                                </div>
+                                <div class="action-buttons">
+                                    <button class="btn btn-light">Like</button>
+                                    <button class="btn btn-light">Comment</button>
+                                    <button class="btn btn-light">Share</button>
+                                </div>
+                                <div class="comment-section">
+
+                                    <div class="comment">
+                                        <img src="https://scontent.fisb17-1.fna.fbcdn.net/v/t51.75761-15/491442733_18071621125899043_2110218967234444301_n.jpg?_nc_cat=100&ccb=1-7&_nc_sid=127cfc&_nc_ohc=aaxnJjGYDP0Q7kNvwFZAFFl&_nc_oc=Adk5g2tqlNJbwCbSPT4hmVCWr4v9KwR5zCNK9VIqGFkYiABZwpAxuW9KaaRALg5rf2q4twbNCO6jNouUMyu8kSyR&_nc_zt=23&_nc_ht=scontent.fisb17-1.fna&_nc_gid=bMBAFKHn2xiABywPqOhVqA&oh=00_AfGvDauqxvcGPyVehldMiQKiZSiBwB_XHQHnyBWv9LbByg&oe=681D50A4"
+                                            alt="User Avatar">
+                                        <div>
+                                            <div class="comment-body">
+                                                <strong>Sharafat Shighi</strong>
+                                                <p>اللہ پاک جنت الفردوس میں اعلی مقام عطا فرمائیں</p>
+                                            </div>
+                                            <div class="comment-actions">
+                                                11h • <a href="#">Like</a> • <a href="#">Reply</a> • <a href="#">See
+                                                    translation</a>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="comment-input">
+                                        <img src="https://scontent.fisb17-1.fna.fbcdn.net/v/t51.75761-15/491442733_18071621125899043_2110218967234444301_n.jpg?_nc_cat=100&ccb=1-7&_nc_sid=127cfc&_nc_ohc=aaxnJjGYDP0Q7kNvwFZAFFl&_nc_oc=Adk5g2tqlNJbwCbSPT4hmVCWr4v9KwR5zCNK9VIqGFkYiABZwpAxuW9KaaRALg5rf2q4twbNCO6jNouUMyu8kSyR&_nc_zt=23&_nc_ht=scontent.fisb17-1.fna&_nc_gid=bMBAFKHn2xiABywPqOhVqA&oh=00_AfGvDauqxvcGPyVehldMiQKiZSiBwB_XHQHnyBWv9LbByg&oe=681D50A4"
+                                            alt="User Avatar">
+                                        <form action="./add-comment.php" method="POST" class="w-100">
+                                            <input type="hidden" name="post_id" readonly
+                                                value="<?php echo $item['post_id']?>">
+                                            <div class="position-relative">
+
+                                                <textarea rows="1" type="text" name="comment"
+                                                    class="form-control position-relative rounded-pill w-100"
+                                                    placeholder="Comment as <?php echo $_SESSION['username']?>"></textarea>
+                                                <button class="btn  position-absolute"
+                                                    style="top:50%;right:10px;transform:translateY(-50%);">
+                                                    <i class="bi bi-send"></i>
+                                            </div>
+                                            </button>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+
+
+
+                        </div>
+                    </div>
+                </div>
             </div>
             <!-- whats app -->
             <div class="col-3 d-flex justify-content-center gap-2 align-items-center">

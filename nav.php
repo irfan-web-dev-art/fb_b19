@@ -1,7 +1,9 @@
-<nav class="px-2 justify-content-between row shadow position-fixed top-0 z-3 w-100 bg-white nav-bar" style="min-height: 60px !important;">
+<nav class="px-2 justify-content-between row shadow position-fixed top-0 z-3 w-100 bg-white nav-bar"
+    style="min-height: 60px !important;">
     <!-- search bar -->
     <div class="col-3 d-flex align-items-center gap-2  ">
-        <i class="bi bi-x fs-4 text-white rounded-circle close-add-story d-none " style="padding: 3px 8px;background-color: #909090 ;cursor: pointer;"></i>
+        <i class="bi bi-x fs-4 text-white rounded-circle close-add-story d-none "
+            style="padding: 3px 8px;background-color: #909090 ;cursor: pointer;"></i>
 
         <div class="logo">
             <img src="./imges/logo.png" alt="" width=" 40px" class="nav-logo">
@@ -63,7 +65,8 @@
                 <i class="bi bi-list fs-3" style="cursor: pointer;"></i>
 
                 <!-- menu dropdown -->
-                <div class="nav-menu-dropdown p-2 border-1 shadow border-black bg-white position-absolute rounded overflow-y-auto overflow-x-hidden">
+                <div
+                    class="nav-menu-dropdown p-2 border-1 shadow border-black bg-white position-absolute rounded overflow-y-auto overflow-x-hidden">
                     <h3 class="fw-bold">Menu</h3>
                     <div class="row gap-0 ">
                         <div class="col-md-8 col-12 ">
@@ -72,7 +75,9 @@
                                 <!-- search bar -->
                                 <div class=" d-flex align-items-center gap-2 p-1 bg-gray rounded-pill w-100 ">
                                     <i class="bi bi-search text-secondary search-icone"></i>
-                                    <input type="search" name="search" class="border-0 search-bar bg-gray rounded-pill  w-100" placeholder="Search Facebook"
+                                    <input type="search" name="search"
+                                        class="border-0 search-bar bg-gray rounded-pill  w-100"
+                                        placeholder="Search Facebook"
                                         style="cursor: pointer; border:0 !important; outline: none;">
 
                                 </div>
@@ -85,74 +90,86 @@
 
                                     <ul class="list-unstyled ">
                                         <!-- events -->
-                                        <div class="d-flex align-items-center gap-3 py-2 px-1 rounded-2 menu-list-items ">
+                                        <div
+                                            class="d-flex align-items-center gap-3 py-2 px-1 rounded-2 menu-list-items ">
                                             <div class="icone">
                                                 <i class="bi bi-calendar2-event-fill fs-3 text-primary"></i>
                                             </div>
 
                                             <div>
                                                 <h5 class="m-0 fw-semibold" style="font-size: 15px;">Events</h5>
-                                                <p class="m-0" style="font-size: 13px;">Organise or find events and other things to do online and nearby.</p>
+                                                <p class="m-0" style="font-size: 13px;">Organise or find events and
+                                                    other things to do online and nearby.</p>
                                             </div>
                                         </div>
 
                                         <!-- Friends -->
-                                        <div class="d-flex align-items-center gap-3 py-2 px-1 rounded-2 menu-list-items">
+                                        <div
+                                            class="d-flex align-items-center gap-3 py-2 px-1 rounded-2 menu-list-items">
                                             <div class="icone">
                                                 <i class="fa-solid fa-user-group fs-4"></i>
                                             </div>
 
                                             <div>
                                                 <h5 class="m-0 fw-semibold" style="font-size: 15px;">Friends</h5>
-                                                <p class="m-0" style="font-size: 13px;">Search for friends or people you may know.</p>
+                                                <p class="m-0" style="font-size: 13px;">Search for friends or people you
+                                                    may know.</p>
                                             </div>
                                         </div>
 
                                         <!-- Groups -->
-                                        <div class="d-flex align-items-center gap-3 py-2 px-1 rounded-2 menu-list-items">
+                                        <div
+                                            class="d-flex align-items-center gap-3 py-2 px-1 rounded-2 menu-list-items">
                                             <div class="icone">
                                                 <i class="fa-solid fa-users-line fs-4 text-primary"></i>
                                             </div>
 
                                             <div>
                                                 <h5 class="m-0 fw-semibold" style="font-size: 15px;">Groups</h5>
-                                                <p class="m-0" style="font-size: 13px;">Connect with people who share your interests.</p>
+                                                <p class="m-0" style="font-size: 13px;">Connect with people who share
+                                                    your interests.</p>
                                             </div>
                                         </div>
                                         <!-- News Feed-->
-                                        <div class="d-flex align-items-center gap-3 py-2 px-1 rounded-2 menu-list-items">
+                                        <div
+                                            class="d-flex align-items-center gap-3 py-2 px-1 rounded-2 menu-list-items">
                                             <div class="icone">
                                                 <i class="bi bi-newspaper fs-4 text-primary ms-1"></i>
                                             </div>
 
                                             <div>
                                                 <h5 class="m-0 fw-semibold" style="font-size: 15px;">News Feed</h5>
-                                                <p class="m-0" style="font-size: 13px;">See relevant posts from people and Pages that you follow.</p>
+                                                <p class="m-0" style="font-size: 13px;">See relevant posts from people
+                                                    and Pages that you follow.</p>
                                             </div>
                                         </div>
 
 
                                         <!-- Feed-->
-                                        <div class="d-flex align-items-center gap-3 py-2 px-1 rounded-2 menu-list-items">
+                                        <div
+                                            class="d-flex align-items-center gap-3 py-2 px-1 rounded-2 menu-list-items">
                                             <div class="icone">
                                                 <i class="fa-solid fa-radio fs-4 text-primary ms-1"></i>
                                             </div>
 
                                             <div>
                                                 <h5 class="m-0 fw-semibold" style="font-size: 15px;">Feeds</h5>
-                                                <p class="m-0" style="font-size: 13px;">See the most recent posts from your friends, groups, Pages and more.</p>
+                                                <p class="m-0" style="font-size: 13px;">See the most recent posts from
+                                                    your friends, groups, Pages and more.</p>
                                             </div>
                                         </div>
 
                                         <!-- page-->
-                                        <div class="d-flex align-items-center gap-3 py-2 px-1 rounded-2 menu-list-items">
+                                        <div
+                                            class="d-flex align-items-center gap-3 py-2 px-1 rounded-2 menu-list-items">
                                             <div class="icone">
                                                 <i class="bi bi-flag-fill fs-4 text-primary ms-1"></i>
                                             </div>
 
                                             <div>
                                                 <h5 class="m-0 fw-semibold" style="font-size: 15px;">Pages</h5>
-                                                <p class="m-0" style="font-size: 13px;">Discover and connect with businesses on Facebook.</p>
+                                                <p class="m-0" style="font-size: 13px;">Discover and connect with
+                                                    businesses on Facebook.</p>
                                             </div>
                                         </div>
 
@@ -172,7 +189,8 @@
 
                                     <ul class="list-unstyled ">
                                         <!-- Gaming Video -->
-                                        <div class="d-flex align-items-center gap-3 py-2 px-1 rounded-2 menu-list-items ">
+                                        <div
+                                            class="d-flex align-items-center gap-3 py-2 px-1 rounded-2 menu-list-items ">
                                             <div class="icone">
                                                 <i class="bi bi-nintendo-switch fs-3 text-primary"></i>
 
@@ -180,12 +198,14 @@
 
                                             <div>
                                                 <h5 class="m-0 fw-semibold" style="font-size: 15px;">Gaming Video</h5>
-                                                <p class="m-0" style="font-size: 13px;">Watch and connect with your favourite games and streamers.</p>
+                                                <p class="m-0" style="font-size: 13px;">Watch and connect with your
+                                                    favourite games and streamers.</p>
                                             </div>
                                         </div>
 
                                         <!-- Friends -->
-                                        <div class="d-flex align-items-center gap-3 py-2 px-1 rounded-2 menu-list-items">
+                                        <div
+                                            class="d-flex align-items-center gap-3 py-2 px-1 rounded-2 menu-list-items">
                                             <div class="icone">
                                                 <i class="bi bi-controller fs-3 text-primary"></i>
                                             </div>
@@ -196,14 +216,16 @@
                                         </div>
 
                                         <!-- Groups -->
-                                        <div class="d-flex align-items-center gap-3 py-2 px-1 rounded-2 menu-list-items">
+                                        <div
+                                            class="d-flex align-items-center gap-3 py-2 px-1 rounded-2 menu-list-items">
                                             <div class="icone">
                                                 <i class="bi bi-tv fs-4 text-primary"></i>
                                             </div>
 
                                             <div>
                                                 <h5 class="m-0 fw-semibold" style="font-size: 15px;">Video</h5>
-                                                <p class="m-0" style="font-size: 13px;">A video destination personalised to your interests and connections.</p>
+                                                <p class="m-0" style="font-size: 13px;">A video destination personalised
+                                                    to your interests and connections.</p>
                                             </div>
                                         </div>
 
@@ -220,74 +242,86 @@
 
                                     <ul class="list-unstyled ">
                                         <!-- events -->
-                                        <div class="d-flex align-items-center gap-3 py-2 px-1 rounded-2 menu-list-items ">
+                                        <div
+                                            class="d-flex align-items-center gap-3 py-2 px-1 rounded-2 menu-list-items ">
                                             <div class="icone">
                                                 <i class="bi bi-calendar2-event-fill fs-3 text-primary"></i>
                                             </div>
 
                                             <div>
                                                 <h5 class="m-0 fw-semibold" style="font-size: 15px;">Events</h5>
-                                                <p class="m-0" style="font-size: 13px;">Organise or find events and other things to do online and nearby.</p>
+                                                <p class="m-0" style="font-size: 13px;">Organise or find events and
+                                                    other things to do online and nearby.</p>
                                             </div>
                                         </div>
 
                                         <!-- Friends -->
-                                        <div class="d-flex align-items-center gap-3 py-2 px-1 rounded-2 menu-list-items">
+                                        <div
+                                            class="d-flex align-items-center gap-3 py-2 px-1 rounded-2 menu-list-items">
                                             <div class="icone">
                                                 <i class="fa-solid fa-user-group fs-4"></i>
                                             </div>
 
                                             <div>
                                                 <h5 class="m-0 fw-semibold" style="font-size: 15px;">Friends</h5>
-                                                <p class="m-0" style="font-size: 13px;">Search for friends or people you may know.</p>
+                                                <p class="m-0" style="font-size: 13px;">Search for friends or people you
+                                                    may know.</p>
                                             </div>
                                         </div>
 
                                         <!-- Groups -->
-                                        <div class="d-flex align-items-center gap-3 py-2 px-1 rounded-2 menu-list-items">
+                                        <div
+                                            class="d-flex align-items-center gap-3 py-2 px-1 rounded-2 menu-list-items">
                                             <div class="icone">
                                                 <i class="fa-solid fa-users-line fs-4 text-primary"></i>
                                             </div>
 
                                             <div>
                                                 <h5 class="m-0 fw-semibold" style="font-size: 15px;">Groups</h5>
-                                                <p class="m-0" style="font-size: 13px;">Connect with people who share your interests.</p>
+                                                <p class="m-0" style="font-size: 13px;">Connect with people who share
+                                                    your interests.</p>
                                             </div>
                                         </div>
                                         <!-- News Feed-->
-                                        <div class="d-flex align-items-center gap-3 py-2 px-1 rounded-2 menu-list-items">
+                                        <div
+                                            class="d-flex align-items-center gap-3 py-2 px-1 rounded-2 menu-list-items">
                                             <div class="icone">
                                                 <i class="bi bi-newspaper fs-4 text-primary ms-1"></i>
                                             </div>
 
                                             <div>
                                                 <h5 class="m-0 fw-semibold" style="font-size: 15px;">News Feed</h5>
-                                                <p class="m-0" style="font-size: 13px;">See relevant posts from people and Pages that you follow.</p>
+                                                <p class="m-0" style="font-size: 13px;">See relevant posts from people
+                                                    and Pages that you follow.</p>
                                             </div>
                                         </div>
 
 
                                         <!-- Feed-->
-                                        <div class="d-flex align-items-center gap-3 py-2 px-1 rounded-2 menu-list-items">
+                                        <div
+                                            class="d-flex align-items-center gap-3 py-2 px-1 rounded-2 menu-list-items">
                                             <div class="icone">
                                                 <i class="fa-solid fa-radio fs-4 text-primary ms-1"></i>
                                             </div>
 
                                             <div>
                                                 <h5 class="m-0 fw-semibold" style="font-size: 15px;">Feeds</h5>
-                                                <p class="m-0" style="font-size: 13px;">See the most recent posts from your friends, groups, Pages and more.</p>
+                                                <p class="m-0" style="font-size: 13px;">See the most recent posts from
+                                                    your friends, groups, Pages and more.</p>
                                             </div>
                                         </div>
 
                                         <!-- page-->
-                                        <div class="d-flex align-items-center gap-3 py-2 px-1 rounded-2 menu-list-items">
+                                        <div
+                                            class="d-flex align-items-center gap-3 py-2 px-1 rounded-2 menu-list-items">
                                             <div class="icone">
                                                 <i class="bi bi-flag-fill fs-4 text-primary ms-1"></i>
                                             </div>
 
                                             <div>
                                                 <h5 class="m-0 fw-semibold" style="font-size: 15px;">Pages</h5>
-                                                <p class="m-0" style="font-size: 13px;">Discover and connect with businesses on Facebook.</p>
+                                                <p class="m-0" style="font-size: 13px;">Discover and connect with
+                                                    businesses on Facebook.</p>
                                             </div>
                                         </div>
 
@@ -307,7 +341,8 @@
 
                                     <ul class="list-unstyled ">
                                         <!-- Gaming Video -->
-                                        <div class="d-flex align-items-center gap-3 py-2 px-1 rounded-2 menu-list-items ">
+                                        <div
+                                            class="d-flex align-items-center gap-3 py-2 px-1 rounded-2 menu-list-items ">
                                             <div class="icone">
                                                 <i class="bi bi-nintendo-switch fs-3 text-primary"></i>
 
@@ -315,12 +350,14 @@
 
                                             <div>
                                                 <h5 class="m-0 fw-semibold" style="font-size: 15px;">Gaming Video</h5>
-                                                <p class="m-0" style="font-size: 13px;">Watch and connect with your favourite games and streamers.</p>
+                                                <p class="m-0" style="font-size: 13px;">Watch and connect with your
+                                                    favourite games and streamers.</p>
                                             </div>
                                         </div>
 
                                         <!-- Friends -->
-                                        <div class="d-flex align-items-center gap-3 py-2 px-1 rounded-2 menu-list-items">
+                                        <div
+                                            class="d-flex align-items-center gap-3 py-2 px-1 rounded-2 menu-list-items">
                                             <div class="icone">
                                                 <i class="bi bi-controller fs-3 text-primary"></i>
                                             </div>
@@ -331,14 +368,16 @@
                                         </div>
 
                                         <!-- Groups -->
-                                        <div class="d-flex align-items-center gap-3 py-2 px-1 rounded-2 menu-list-items">
+                                        <div
+                                            class="d-flex align-items-center gap-3 py-2 px-1 rounded-2 menu-list-items">
                                             <div class="icone">
                                                 <i class="bi bi-tv fs-4 text-primary"></i>
                                             </div>
 
                                             <div>
                                                 <h5 class="m-0 fw-semibold" style="font-size: 15px;">Video</h5>
-                                                <p class="m-0" style="font-size: 13px;">A video destination personalised to your interests and connections.</p>
+                                                <p class="m-0" style="font-size: 13px;">A video destination personalised
+                                                    to your interests and connections.</p>
                                             </div>
                                         </div>
 
@@ -445,6 +484,12 @@
             </div>
 
 
+            <li>
+                <a href="./logout.php">
+
+                    logout
+                </a>
+            </li>
         </ul>
     </div>
 
