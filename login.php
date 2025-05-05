@@ -23,6 +23,7 @@ $count = mysqli_num_rows($result);
 
 if ($count > 0) {
     $_SESSION['username'] = $row['f_name'];
+    $_SESSION['user_id'] = $row['id'];
     header("Location: $base_url/home.php");
 } else {
     $_SESSION['invalid_credentials'] = 'Invalid Credentials';

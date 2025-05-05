@@ -6,6 +6,10 @@
   background-color: var(--bg-gray) !important;
 }
 
+::-webkit-scrollbar {
+  width: 0px;
+}
+
 body {
   font-family: sans-serif;
 }
@@ -169,7 +173,62 @@ body {
   cursor: pointer;
 }
 
+.side-bar-items:hover {
+  cursor: pointer;
+  background-color: #dddfe2;
+  transition: all 0.5s;
+}
+
+.term_rule a:hover {
+  text-decoration: underline !important;
+}
+
+.nav-menu-dropdown .menu-list-items:hover {
+  cursor: pointer;
+  transition: all 0.5s;
+  background-color: var(--bg-gray);
+}
+.nav-menu-dropdown {
+  width: 600px;
+  top: 50px;
+  max-height: 90vh;
+  height: auto;
+  transition: all 1s;
+  right: -150px;
+  transform: translateX(200%);
+}
+
+/* Add story */
+.add-story-bg {
+  transform: translateY(-100%);
+  transition: 1s;
+}
+
+.add-story:hover i {
+  background-color: var(--bg-gray);
+  transition: all 0.5s;
+}
+.add-story:hover .add-story-icone {
+  background-color: #f1f1f3;
+}
+
+.ads-sidebar .ads:hover {
+  background-color: var(--bg-gray);
+  transition: all 0.5s;
+  cursor: pointer;
+}
+
+/* Media qurries */
+@media (max-width: 765px) {
+  .nav-menu-dropdown {
+    width: 400px !important;
+  }
+}
+
 @media (max-width: 576px) {
+  .nav-menu-dropdown {
+    width: 350px !important;
+  }
   .fb-logo {
     margin: auto !important;
     display: block !important;
