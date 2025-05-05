@@ -6,6 +6,11 @@ let add_account = document.querySelector(".add-account");
 let login_underlay = document.querySelector(".login-underlay");
 let login_overlay = document.querySelector(".login-overlay");
 let close = document.querySelector(".close-login");
+let close_btn = document.querySelector(".invalid");
+let invalid_popup = document.querySelector(".notification-popup");
+
+let post_trigger = document.querySelector(".post-trigger");
+
 cross.addEventListener("click", () => {
   card.style.display = "none";
 });
@@ -33,3 +38,9 @@ close.addEventListener("click", () => {
     login_underlay.style.transform = "translateX(100%)";
   }, 450);
 });
+
+close_btn.addEventListener("click", () => {
+  invalid_popup.style.transform = "translateX(150%)";
+});
+
+// post trigger btn

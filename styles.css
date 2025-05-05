@@ -1,3 +1,11 @@
+:root {
+  --bg-gray: #e2e5e9;
+}
+
+.bg-gray {
+  background-color: var(--bg-gray) !important;
+}
+
 body {
   font-family: sans-serif;
 }
@@ -48,4 +56,122 @@ body {
 
 .p-3-5 {
   padding: 10px 14px !important;
+}
+
+.notification-popup {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  width: 350px;
+  padding: 15px;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  display: flex;
+  align-items: flex-start;
+  z-index: 1000;
+  animation: slideIn 0.3s ease-out;
+  transition: all 0.6s;
+  font-family: "Segoe UI", Roboto, sans-serif;
+}
+
+.invalid-credentials {
+  background-color: #fff8f8;
+  border-left: 4px solid #ff4d4f;
+}
+
+.notification-icon {
+  margin-right: 12px;
+}
+
+.notification-icon svg {
+  width: 24px;
+  height: 24px;
+  fill: #ff4d4f;
+}
+
+.notification-content h3 {
+  margin: 0 0 5px 0;
+  color: #ff4d4f;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.notification-content p {
+  margin: 0;
+  color: #666;
+  font-size: 14px;
+  line-height: 1.4;
+}
+
+.close-btn {
+  margin-left: auto;
+  background: none;
+  border: none;
+  font-size: 20px;
+  cursor: pointer;
+  color: #999;
+  padding: 0 0 0 10px;
+}
+
+.close-btn:hover {
+  color: #666;
+}
+
+.sidebar {
+  width: 250px;
+  background-color: #f0f2f5;
+  padding: 10px;
+  height: 100vh;
+  position: fixed;
+}
+.sidebar a {
+  display: block;
+  padding: 10px;
+  color: #000;
+  text-decoration: none;
+  margin-bottom: 10px;
+  border-radius: 8px;
+}
+.sidebar a:hover {
+  background-color: #e4e6eb;
+}
+.content {
+  margin-left: 250px;
+  padding: 20px;
+  flex-grow: 1;
+}
+
+@keyframes slideIn {
+  from {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+.post-trigger {
+  background-color: #e4e6e9 !important;
+  cursor: pointer;
+}
+
+.post-trigger:hover {
+  background-color: rgb(215, 218, 223) !important;
+}
+
+.image-drop {
+  transition: all 0.2s;
+}
+
+.image-drop:hover {
+  background-color: var(--bg-gray) !important;
+  cursor: pointer;
+}
+
+@media (max-width: 576px) {
+  .fb-logo {
+    margin: auto !important;
+    display: block !important;
+  }
 }
