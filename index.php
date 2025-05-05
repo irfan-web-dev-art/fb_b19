@@ -171,7 +171,10 @@ session_start();
 
 
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> 0f5adc5b6f860653364a36eaa923a64b020e9230
                     </form>
 
 
@@ -182,10 +185,14 @@ session_start();
     </div>
 
 
+<<<<<<< HEAD
     <?php include './boot_js.php';
     unset($_SESSION['invalid_credentials'])
 
     ?>
+=======
+    <?php include './boot_js.php' ?>
+>>>>>>> 0f5adc5b6f860653364a36eaa923a64b020e9230
 
 
     <script src="./app.js"></script>

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <div class="w-100  min-vh-100 d-flex justify-content-between flex-column  " style="padding-top: 20%;">
     <ul class="list-unstyled d-flex flex-column ">
 
@@ -201,3 +202,6 @@
         </div>
     </footer> 
 </div>
+=======
+<h1>Sidebar</h1>
+>>>>>>> 0f5adc5b6f860653364a36eaa923a64b020e9230
